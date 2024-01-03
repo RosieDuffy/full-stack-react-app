@@ -1,3 +1,5 @@
+// Display validation errors 
+
 const ErrorsDisplay = ({ errors }) => {
   let errorsDisplay = null;
 

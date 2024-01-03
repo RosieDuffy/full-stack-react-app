@@ -5,6 +5,10 @@ import { api } from "../utils/apiHelper";
 import ErrorsDisplay from "./ErrorsDisplay";
 import UserContext from "../context/UserContext";
 
+/*
+User Sign Up Component - Renders a user sign up form
+*/
+
 const UserSignUp = () => {
   const { actions } = useContext(UserContext);
   const navigate = useNavigate();

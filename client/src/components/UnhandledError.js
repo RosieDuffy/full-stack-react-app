@@ -1,3 +1,6 @@
+// Displays error message to user when there is an unexpected error
+
+
 const UnhandledError = () => {
   return (
     <div className="wrap">

@@ -1,3 +1,5 @@
+// Displays Forbidden message when access to a route is denied
+
 const Forbidden = () => {
   return (
     <div className="wrap">

@@ -4,6 +4,10 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import ErrorsDisplay from "./ErrorsDisplay";
 
+/*
+User Sign In Component - renders a sign in form
+*/
+
 const UserSignIn = () => {
   const { actions } = useContext(UserContext);
 

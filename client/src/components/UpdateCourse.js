@@ -5,6 +5,10 @@ import { api } from "../utils/apiHelper";
 import UserContext from "../context/UserContext";
 import ErrorsDisplay from "./ErrorsDisplay";
 
+/*
+Update Course Component - allows the user to update a course, if they are the owner. If they are not, access is denied.
+*/
+
 const UpdateCourse = () => {
   const { id } = useParams();
   const navigate = useNavigate();

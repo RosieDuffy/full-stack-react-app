@@ -3,6 +3,10 @@ import { NavLink, Link, useNavigate } from "react-router-dom";
 
 import { api } from "../utils/apiHelper";
 
+/*
+Courses Component - retrieves data on all courses from the api and displays a link to each course. The user is also linked to create a new course
+*/
+
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const navigate = useNavigate();

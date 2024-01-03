@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import Cookies from "js-cookie";
 import { api } from "../utils/apiHelper";
 
+// Context to help provide user information to the rest of the app
 const UserContext = createContext(null);
 
 export const UserProvider = (props) => {
@@ -14,7 +15,7 @@ export const UserProvider = (props) => {
       const user = await response.json();
       user.password = credentials.password;
       setAuthUser(user);
-      Cookies.set("authenticatedUser", JSON.stringify(user), { expires: 1 });
+      Cookies.set("authenticatedUser", JSON.stringify(user), { expires: 1 }); // create cookie to store logged in user info, deleted after one day
       return user;
     } else if (response.status === 401) {
       return null;
@@ -25,7 +26,7 @@ export const UserProvider = (props) => {
 
   const signOut = () => {
     setAuthUser(null);
-    Cookies.remove("authenticatedUser");
+    Cookies.remove("authenticatedUser"); // clear cookie after user sign out
   };
 
   return (

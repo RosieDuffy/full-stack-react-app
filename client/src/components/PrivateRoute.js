@@ -2,6 +2,8 @@ import { useContext } from "react";
 import UserContext from "../context/UserContext";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 
+// Higher Order Component for configuring protected routes
+
 const PrivateRoute = () => {
   const { authUser } = useContext(UserContext);
   const location = useLocation();

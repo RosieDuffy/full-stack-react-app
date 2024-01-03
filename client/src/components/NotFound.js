@@ -1,3 +1,5 @@
+// Displays page not found message if route cannot be found
+
 const NotFound = () => {
   return (
     <div className="wrap">

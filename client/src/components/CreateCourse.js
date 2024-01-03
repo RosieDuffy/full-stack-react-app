@@ -5,6 +5,10 @@ import { api } from "../utils/apiHelper";
 import ErrorsDisplay from "./ErrorsDisplay";
 import UserContext from "../context/UserContext";
 
+/*
+Create Course Component - if the user is signed in they are able to create a new course. Validation errors are displayed if title and description are not entered.
+*/
+
 const CreateCourse = () => {
   const { authUser } = useContext(UserContext);
   const navigate = useNavigate();

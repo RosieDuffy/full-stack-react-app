@@ -5,6 +5,10 @@ import Markdown from "react-markdown";
 import { api } from "../utils/apiHelper";
 import UserContext from "../context/UserContext";
 
+/*
+Course Detail Component - retrieves course data from the api to display. If the user is the course owner, "update" and "delete" are visible
+*/
+
 const CourseDetail = () => {
   const [course, setCourse] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -44,7 +48,7 @@ const CourseDetail = () => {
         console.log("Course deleted");
         navigate("/");
       } else if (response.status === 403) {
-        navigate("/forbidden");
+        navigate("/forbidden"); // if user is not the course owner access is denied
       } else {
         throw new Error();
       }
