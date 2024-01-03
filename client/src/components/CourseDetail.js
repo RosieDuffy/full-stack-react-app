@@ -45,8 +45,6 @@ const CourseDetail = () => {
         navigate("/");
       } else if (response.status === 403) {
         navigate("/forbidden");
-      } else if (response.status === 500) {
-        navigate("/error");
       } else {
         throw new Error();
       }
@@ -60,7 +58,7 @@ const CourseDetail = () => {
       <main>
         <div className="actions--bar">
           <div className="wrap">
-            {authUser && authUser.id === course.owner.id ? (
+            {authUser && authUser.id === course.userId ? (
               <>
                 <Link className="button" to={`/courses/${course.id}/update`}>
                   Update Course

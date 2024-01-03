@@ -15,7 +15,7 @@ const CreateCourse = () => {
   const description = useRef(null);
   const estimatedTime = useRef(null);
   const materialsNeeded = useRef(null);
-  const courseCreator = useRef(null);
+  const courseCreator = authUser;
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = async (e) => {
@@ -69,7 +69,7 @@ const CreateCourse = () => {
               />
 
               <p>
-                By {courseCreator.firstname} {courseCreator.lastName}
+                By {courseCreator.firstName} {courseCreator.lastName}
               </p>
 
               <label htmlFor="courseDescription">Course Description</label>

@@ -12,6 +12,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import UpdateCourse from "./components/UpdateCourse";
 import Forbidden from "./components/Forbidden";
 import NotFound from "./components/NotFound";
+import UnhandledError from "./components/UnhandledError";
 
 // function testFunction() {
 //   fetch("http://localhost:5000/api/courses")
@@ -31,10 +32,12 @@ function App() {
         <Route path="/signout" element={<UserSignOut />} />
         <Route element={<PrivateRoute />}>
           <Route path="/courses/create" element={<CreateCourse />} />
-          <Route path="/courses/:id/create" element={<UpdateCourse />} />
+          <Route path="/courses/:id/update" element={<UpdateCourse />} />
         </Route>
         <Route path="/forbidden" element={<Forbidden />} />
         <Route path="/notfound" element={<NotFound />} />
+        <Route path="/error" element={<UnhandledError />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -15,7 +15,6 @@ const UpdateCourse = () => {
   const description = useRef(null);
   const estimatedTime = useRef(null);
   const materialsNeeded = useRef(null);
-  const courseCreator = useRef(null);
   const [course, setCourse] = useState([]);
   const [errors, setErrors] = useState([]);
 
@@ -31,7 +30,9 @@ const UpdateCourse = () => {
           } else {
             navigate("/forbidden");
           }
-        } else {
+        } else if(response.status === 404){
+            navigate('/notfound')
+        }else {
           throw new Error();
         }
       } catch (error) {
@@ -44,15 +45,20 @@ const UpdateCourse = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const course = {
+    const currentCourse = {
       title: title.current.value,
       description: description.current.value,
       estimatedTime: estimatedTime.current.value,
       materialsNeeded: materialsNeeded.current.value,
-      userId: courseCreator.id,
+      userId: authUser.id,
     };
     try {
-      const response = await api("/courses", "POST", course, authUser);
+      const response = await api(
+        `/courses/${id}`,
+        "PUT",
+        currentCourse,
+        authUser
+      );
       if (response.status === 204) {
         console.log(
           `The course: ${course.title} has been successfully updated!`
@@ -64,7 +70,7 @@ const UpdateCourse = () => {
       } else if (response.status === 403) {
         navigate("/forbidden");
       } else {
-        throw new Error();
+        navigate("/notfound");
       }
     } catch (error) {
       console.log(error);
