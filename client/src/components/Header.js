@@ -17,10 +17,10 @@ const Header = () => {
           {authUser === null ? (
             <ul className="header--signedout">
               <li>
-                <a href="sign-up.html">Sign Up</a>
+                <NavLink to="/signup">Sign Up</NavLink>
               </li>
               <li>
-                <a href="sign-in.html">Sign In</a>
+                <NavLink to="/signin">Sign In</NavLink>
               </li>
             </ul>
           ) : (

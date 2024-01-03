@@ -6,9 +6,12 @@ import Courses from "./components/Courses";
 import CourseDetail from "./components/CourseDetail";
 import UserSignIn from "./components/UserSignIn";
 import UserSignUp from "./components/UserSignUp";
+import UserSignOut from "./components/UserSignOut";
 import CreateCourse from "./components/CreateCourse";
 import PrivateRoute from "./components/PrivateRoute";
 import UpdateCourse from "./components/UpdateCourse";
+import Forbidden from "./components/Forbidden";
+import NotFound from "./components/NotFound";
 
 // function testFunction() {
 //   fetch("http://localhost:5000/api/courses")
@@ -25,10 +28,13 @@ function App() {
         <Route path="/courses/:id" element={<CourseDetail />} />
         <Route path="/signin" element={<UserSignIn />} />
         <Route path="/signup" element={<UserSignUp />} />
+        <Route path="/signout" element={<UserSignOut />} />
         <Route element={<PrivateRoute />}>
           <Route path="/courses/create" element={<CreateCourse />} />
           <Route path="/courses/:id/create" element={<UpdateCourse />} />
         </Route>
+        <Route path="/forbidden" element={<Forbidden />} />
+        <Route path="/notfound" element={<NotFound />} />
       </Routes>
     </div>
   );
