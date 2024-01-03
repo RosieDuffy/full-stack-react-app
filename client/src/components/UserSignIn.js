@@ -58,9 +58,16 @@ const UserSignIn = () => {
             name="emailAddress"
             type="email"
             ref={emailAddress}
+            defaultValue=""
           />
-          <label htmlFor="password">Label</label>
-          <input id="password" name="password" type="password" ref={password} />
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            ref={password}
+            defaultValue=""
+          />
           <button className="button" type="submit">
             Sign In
           </button>
