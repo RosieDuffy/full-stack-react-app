@@ -84,7 +84,7 @@ const UserSignUp = () => {
         </form>
         <p>
           Already have a user account? Click here to{" "}
-          <Link to="/signup">sign in</Link>!
+          <Link to="/signin">sign in</Link>!
         </p>
       </div>
     </main>
