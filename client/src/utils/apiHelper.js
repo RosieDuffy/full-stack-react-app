@@ -1,7 +1,7 @@
 // Function to make fetch requests to the api
 
 export const api = (path, method = "GET", body = null, credentials = null) => {
-  const url = "http://localhost:5000/api" + path;
+  const url = "full-stack-react-app-production.up.railway.app" + path;
 
   const options = {
     method,
