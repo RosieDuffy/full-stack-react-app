@@ -80,11 +80,11 @@ const CourseDetail = () => {
         </div>
 
         <div className="wrap">
-          <h2>Course Detail</h2>
+          {/* <h2>Course Detail</h2> */}
           <form>
             <div className="main--flex">
               <div>
-                <h3 className="course--detail--title">Course</h3>
+                <h3 className="course--detail--title">Course Detail</h3>
                 <h4 className="course--name">{course.title}</h4>
                 <p>
                   By {course.User.firstName} {course.User.lastName}

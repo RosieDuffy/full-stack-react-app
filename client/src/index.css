@@ -54,10 +54,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* gap: 7rem; */
 }
 .header--logo a {
   font-size: 2rem;
   color: #fff;
+  /* margin-right: 7.5rem; */
 }
 header li {
   font-size: 0.8rem;
@@ -68,6 +70,7 @@ header li {
   cursor: pointer;
   transition: transform 0.2s;
   box-shadow: var(--color-4) 0 0 8px 0.5px;
+  
 }
 
 nav li:hover {
@@ -83,10 +86,13 @@ header nav a {
   text-align: right;
   line-height: 1.25;
 }
+
 .header--signedout li {
   display: inline-block;
-  margin-left: 0.5rem;
+  margin: 0.5rem 0 0.5rem 1rem;
 }
+
+
 
 /* COURSE STYLES */
 
@@ -128,6 +134,7 @@ header nav a {
   font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 0.25rem;
+  border-bottom: 1px solid #888;
 }
 .course--title {
   color: #fff;
@@ -143,15 +150,15 @@ header nav a {
 .course--add--title .add {
   width: 20px;
   height: auto;
-  margin-right: 5px;
-  fill: #57496e;
+  margin-right: 15px;
+  fill: var(--link-color);
 }
 .course--detail--title {
   padding-bottom: 0.25rem;
   border-bottom: 1px solid #888;
   margin: 3rem 0 0.5rem;
   font-size: 0.9rem;
-  color: #555;
+  /* color: #555; */
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -159,15 +166,20 @@ header nav a {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
-  color: #47395e;
+  /* color: #47395e; */
 }
 .course--detail--list {
   font-weight: 300;
-  margin: 0 0 1.5rem 1rem;
+  margin: 0 0 1.5rem 0;
+  padding-left: 0;
   line-height: 1.5;
 }
+
+.course--detail--list ul {
+  padding-left: 1rem;
+}
 .actions--bar {
-  background: #e9e5f0;
+  background: var(--background-color);
   padding: 1rem 0;
   margin: -2rem 0 2rem;
 }
@@ -283,7 +295,7 @@ textarea:focus {
 @media screen and (min-width: 600px) {
   .header--signedin li {
     display: inline-block;
-    margin-left: 0.5rem;
+    margin-left: 2.5rem;
     line-height: 1;
   }
   .main--grid {

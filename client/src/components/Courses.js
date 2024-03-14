@@ -65,7 +65,7 @@ const Courses = () => {
               >
                 <polygon points="7,6 7,0 6,0 6,6 0,6 0,7 6,7 6,13 7,13 7,7 13,7 13,6 "></polygon>
               </svg>
-              New Course
+              Create New Course
             </span>
           </Link>
       

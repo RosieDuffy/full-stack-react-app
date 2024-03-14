@@ -14,7 +14,7 @@ const Header = () => {
       <div className="wrap header--flex">
         <h1 className="header--logo">
           <NavLink to="/" end>
-            Courses
+            Course Directory
           </NavLink>
         </h1>
         <nav>
@@ -30,7 +30,7 @@ const Header = () => {
           ) : (
             <ul className="header--signedin">
               <span>
-                Welcome {authUser.firstName} {authUser.lastName}
+                Welcome, {authUser.firstName} {authUser.lastName}
               </span>
               <li>
                 <NavLink to="signout">Sign Out</NavLink>
